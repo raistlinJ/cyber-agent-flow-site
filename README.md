@@ -1,6 +1,6 @@
-# Cyber AgentFlow — Landing Page
+# Cyber-Agent-Flow — Landing Page
 
-Static GitHub Pages site for the Cyber AgentFlow research tool.
+Static GitHub Pages site for the Cyber-Agent-Flow research tool.
 
 ## Structure
 
@@ -34,7 +34,7 @@ Replace the `demo-placeholder` div with:
 <iframe
   class="demo-video"
   src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-  title="Cyber AgentFlow Demo"
+  title="Cyber-Agent-Flow Demo"
   frameborder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen>

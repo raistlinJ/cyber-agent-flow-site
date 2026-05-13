@@ -1,5 +1,5 @@
 /* =========================================================
-   Cyber AgentFlow — script.js
+   Cyber-Agent-Flow — script.js
    Features: navbar scroll, mobile menu, smooth scroll,
              copy-to-clipboard, screenshot modal, scroll reveal
 ========================================================= */
