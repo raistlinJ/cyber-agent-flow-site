@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cyber AgentFlow — Privacy-First Agentic Pentesting</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Barlow:wght@300;400;600;700;900&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAV
+  ============================================================ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="nav-logo-main">Cyber AgentFlow</span>
+        <span class="nav-logo-sub">Fully Localized Agentic Cybersecurity</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#ecosystem">Ecosystem</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#architecture">Architecture</a></li>
+        <li><a href="#findings">Findings</a></li>
+        <li><a href="#demo">Demo</a></li>
+        <li><a href="#install">Install</a></li>
+        <li><a href="#team">Team</a></li>
+        <li>
+          <a href="https://github.com/raistlinJ/cyber-agent-flow" target="_blank" class="nav-github">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            GitHub
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-scan-line"></div>
+    <div class="hero-inner">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Research Tool &mdash; Submitted to Symposium
+      </div>
+      <h1 class="hero-title">
+        <span class="hero-title-main">CYBER AGENTFLOW</span>
+      </h1>
+      <p class="hero-overview-head">
+        From outcome-only benchmarking to full execution-trace analysis
+      </p>
+      <p class="hero-sub">
+        Most LLM pentesting systems are measured by outcomes, not behavior. Cyber AgentFlow changes that by instrumenting the full agent workflow in local environments, capturing prompts, responses, tool calls, outputs, and analyst annotations as structured traces. This observability reveals failure patterns like redundant reasoning loops and repeated tool invocations, creating a practical path to safer and more efficient agent-assisted cybersecurity.
+      </p>
+      <div class="hero-cta">
+        <a href="https://github.com/raistlinJ/cyber-agent-flow" target="_blank" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          View on GitHub
+        </a>
+        <a href="#demo" class="btn btn-secondary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Watch Demo
+        </a>
+        <a href="#install" class="btn btn-ghost">Quick Install</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-val">100%</span>
+          <span class="stat-label">Local Execution</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-val">MCP</span>
+          <span class="stat-label">Model Context Protocol</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-val">SSE</span>
+          <span class="stat-label">Real-Time Streaming</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-val">HITL</span>
+          <span class="stat-label">Human-in-the-Loop</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ECOSYSTEM
+  ============================================================ -->
+  <section id="ecosystem">
+    <div class="section-inner">
+      <div class="section-label">// 01 — PLATFORM OVERVIEW</div>
+      <h2 class="section-title">Tool Ecosystem and Execution Flow</h2>
+      <p class="section-desc">Cyber AgentFlow connects local LLM reasoning with MCP-based tool execution, policy enforcement, and structured telemetry so analysts can observe and improve every engagement.</p>
+
+      <div class="ecosystem-grid">
+        <article class="ecosystem-card">
+          <h3>Platform Overview</h3>
+          <ul>
+            <li>WebUI orchestrates analyst prompts, session controls, and live streaming updates.</li>
+            <li>MCP client broker handles context, tool routing, and model interactions.</li>
+            <li>Local execution keeps prompts, outputs, and findings inside your environment.</li>
+            <li>Structured logger captures transcripts, tool calls, artifacts, and annotations.</li>
+          </ul>
+        </article>
+
+        <article class="ecosystem-card">
+          <h3>Tool Ecosystem</h3>
+          <div class="tool-chip-wrap">
+            <span class="tool-chip">nmap</span>
+            <span class="tool-chip">gobuster</span>
+            <span class="tool-chip">nikto</span>
+            <span class="tool-chip">sqlmap</span>
+            <span class="tool-chip">hydra</span>
+            <span class="tool-chip">metasploit</span>
+            <span class="tool-chip">custom MCP tools</span>
+          </div>
+          <p class="ecosystem-note">Each invocation is scope-checked by allow/deny policy rules before execution.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT
+  ============================================================ -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="section-label">// 02 — ABOUT</div>
+      <h2 class="section-title">The Problem with Cloud-Based Hacking Tools</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Modern AI-assisted penetration testing platforms push your most sensitive data — network topologies, 
+            zero-day findings, vulnerability telemetry — to remote cloud APIs. For red teams, this is an 
+            unacceptable trade-off.
+          </p>
+          <p>
+            <strong>Cyber AgentFlow</strong> takes a different path. By orchestrating everything through a local 
+            Ollama-compatible LLM instance and the Model Context Protocol (MCP), the platform bridges natural 
+            language reasoning to native cybersecurity toolchains without a single packet crossing your perimeter.
+          </p>
+          <p>
+            The result: an autonomous agent that can run <code>nmap</code>, <code>gobuster</code>, 
+            <code>nikto</code>, Metasploit, and dozens of other tools — directed by conversational prompts, 
+            bounded by configurable network policies, and logged with forensic-grade transcripts — entirely offline.
+          </p>
+        </div>
+        <div class="about-callouts">
+          <div class="callout">
+            <div class="callout-icon">🔒</div>
+            <div>
+              <strong>Air-Gap Ready</strong>
+              <p>No internet required. No API keys sent to third parties. Optional local auth for internal proxies.</p>
+            </div>
+          </div>
+          <div class="callout">
+            <div class="callout-icon">🤖</div>
+            <div>
+              <strong>Agentic Reasoning</strong>
+              <p>The LLM reads tool output and autonomously decides the next action — closing the loop between reconnaissance and exploitation.</p>
+            </div>
+          </div>
+          <div class="callout">
+            <div class="callout-icon">📋</div>
+            <div>
+              <strong>Audit-Grade Logging</strong>
+              <p>Every tool call, every LLM turn, every annotation is timestamped and archived as structured JSON and Markdown transcripts.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FEATURES
+  ============================================================ -->
+  <section id="features">
+    <div class="section-inner">
+      <div class="section-label">// 03 — AUDIENCE FIT</div>
+      <h2 class="section-title">Built for Operators. Designed for Researchers.</h2>
+      <div class="role-grid">
+        <article class="role-card">
+          <h3>Built for Operators</h3>
+          <ul>
+            <li>Human-in-the-loop WebUI for directing multi-step pentest objectives in natural language.</li>
+            <li>Context controls, tool scoping, and network allow or block rules to constrain execution.</li>
+            <li>Local-first operation with MCP-integrated tooling to keep sensitive telemetry in-house.</li>
+          </ul>
+        </article>
+
+        <article class="role-card">
+          <h3>Designed for Researchers</h3>
+          <ul>
+            <li>Structured traces capture prompts, responses, tool calls, outputs, annotations, and timing.</li>
+            <li>Session archives support post-hoc analysis of reasoning loops and orchestration efficiency.</li>
+            <li>Reproducible workflow data enables cross-run comparisons and method refinement.</li>
+          </ul>
+        </article>
+      </div>
+      <p class="role-footnote">A single platform for bounded execution in operations and transparent workflow analysis in research.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ARCHITECTURE
+  ============================================================ -->
+  <section id="architecture">
+    <div class="section-inner">
+      <div class="section-label">// 04 — ARCHITECTURE</div>
+      <h2 class="section-title">Cyber AgentFlow Architecture</h2>
+
+      <div class="architecture-layout">
+        <div class="architecture-media">
+          <figure class="paper-figure">
+            <div class="paper-figure-frame">
+              <img src="assets/images/cyber-agent-flow-architecture.png" alt="Cyber AgentFlow architecture showing human input, agentic broker, local execution, and observation telemetry loop" />
+            </div>
+            <figcaption>
+              Figure 1. Cyber AgentFlow architecture supporting human-in-the-loop orchestration, local tool execution through MCP interfaces, and structured telemetry collection for post-hoc analysis.
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="architecture-content">
+          <p class="architecture-summary">
+            The framework centers on a closed observation loop: analyst objectives enter through the WebUI, the Agentic Broker executes MCP-enabled tool actions, and structured session traces are continuously captured to support workflow diagnostics, reproducibility, and efficiency analysis.
+          </p>
+
+          <div class="telemetry-panel">
+            <h3>Telemetry Captured Per Session</h3>
+            <div class="telemetry-list">
+              <span>Prompts</span>
+              <span>Model Responses</span>
+              <span>Tool Invocations</span>
+              <span>Command Outputs</span>
+              <span>Analyst Annotations</span>
+              <span>Timing Metadata</span>
+              <span>Artifacts and Logs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FINDINGS SNAPSHOT
+  ============================================================ -->
+  <section id="findings">
+    <div class="section-inner">
+      <div class="section-label">// 05 — FINDINGS SNAPSHOT</div>
+      <h2 class="section-title">Preliminary Results and Observations</h2>
+      <p class="section-desc">In a multi-step pivoting scenario, the Cyber AgentFlow workflow successfully reached the target objective using Ollama with MCP-connected tools. Instrumented traces enabled phase-level analysis of time and interaction patterns across reconnaissance, service identification, exploitation, and pivot setup.</p>
+
+      <div class="findings-context">
+        <article class="findings-setup">
+          <h3>Pivot Test Setup (Figure 2)</h3>
+          <ul>
+            <li>Scenario: multi-step pivoting engagement with staged reconnaissance and internal reachability constraints.</li>
+            <li>Execution: Ollama-based agent with MCP-connected cybersecurity tools in a local environment.</li>
+            <li>Measurement: trace-derived phase timing and interaction counts across the attack workflow.</li>
+          </ul>
+        </article>
+
+        <figure class="paper-figure findings-figure">
+          <div class="paper-figure-frame">
+            <img src="assets/images/pivot-test-figure.png" alt="Pivot testing scenario used for Cyber AgentFlow evaluation" />
+          </div>
+          <figcaption>
+            Figure 2. Pivoting scenario used to generate execution traces for time and interaction analysis.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="findings-grid">
+        <article class="finding-item">
+          <h3>Successful End-to-End Execution</h3>
+          <p>The agent completed the defined pivoting task while producing structured traces suitable for post-hoc analysis and replay.</p>
+        </article>
+        <article class="finding-item">
+          <h3>Observed vs. Estimated Efficient Workflow</h3>
+          <p>Trace-based analysis estimated roughly 50 minutes in the observed run versus about 11 minutes under a counterfactual efficient orchestration setting.</p>
+        </article>
+        <article class="finding-item">
+          <h3>Where Time Concentrated</h3>
+          <p>The largest overhead appeared in exploit selection, repeated exploit attempts, and pivot configuration phases.</p>
+        </article>
+        <article class="finding-item">
+          <h3>Actionable Failure Patterns</h3>
+          <p>Recurring patterns included redundant tool calls, command-context mismatches, exploit retry loops, and pivot setup complexity.</p>
+        </article>
+      </div>
+
+      <p class="findings-note">These observations are preliminary and drawn from controlled runs; they are intended to guide systematic workflow improvements rather than serve as broad statistical claims.</p>
+
+      <div class="telemetry-panel findings-conclusion">
+        <h3>Conclusion and Next Steps</h3>
+        <p>Cyber AgentFlow shifts evaluation from outcome-only benchmarking to execution-level observability. By embedding an LLM agent in a local, bounded tool environment and capturing full interaction traces, the framework enables more transparent diagnosis and iterative improvement of agent-assisted penetration testing workflows.</p>
+        <p>Future work expands scenario diversity and dataset scale, with increased automation and human-in-the-loop analysis to detect recurring inefficiencies and align agent behavior with established penetration testing practice.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       DEMO / VIDEOS
+  ============================================================ -->
+  <section id="demo">
+    <div class="section-inner">
+      <div class="section-label">// 06 — DEMO</div>
+      <h2 class="section-title">See It In Action</h2>
+      <p class="section-desc">Watch the agent autonomously chain reconnaissance and exploitation tasks through natural language commands.</p>
+      <div class="demo-container">
+        <div class="demo-placeholder">
+          <div class="demo-placeholder-inner">
+            <div class="demo-icon">▶</div>
+            <p>Demo video coming soon</p>
+            <small>Check back after the symposium, or <a href="https://github.com/raistlinJ/cyber-agent-flow" target="_blank">run it yourself</a></small>
+          </div>
+        </div>
+        <!-- SWAP the above block for an iframe or local <video> tag when ready:
+        <iframe
+          class="demo-video"
+          src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+          title="Cyber AgentFlow Demo"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        -->
+      </div>
+
+      <div class="screenshots-label">Screenshots</div>
+      <div class="screenshots-carousel-container">
+        <div class="screenshots-track" id="screenshotsTrack">
+          <!-- Slide 1 -->
+          <div class="screenshot-card" data-caption="Web-based setup and interaction. Allows private and OpenAI-compatible providers.">
+            <img src="assets/images/system/1. web-based setup and interaction. allows private and openai-compatible providers.png" alt="Web-based setup and interaction" />
+            <div class="screenshot-info"><span>Web Setup & Interaction</span></div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="screenshot-card" data-caption="Ensuring only allowed devices are scanned (allow and deny lists).">
+            <img src="assets/images/system/2. A key aspect is ensuring that only allowed devices are scanned (allow and deny lists).png" alt="Allow and Deny Lists" />
+            <div class="screenshot-info"><span>Access Controls</span></div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="screenshot-card" data-caption="Several pre-built MCP servers can be enabled or disabled based on needs.">
+            <img src="assets/images/system/3. several pre-built mcp servers are enable or disabled based on needs.png" alt="MCP Server Configuration" />
+            <div class="screenshot-info"><span>MCP Tool Ecosystem</span></div>
+          </div>
+          <!-- Slide 4 -->
+          <div class="screenshot-card" data-caption="Extensive logging for prompts, artifacts, analyses, and system-wide keystrokes.">
+            <img src="assets/images/system/4. extensive logging for prompts, artifacts, analyses, and even system-wide keystrokes.png" alt="Extensive Logging" />
+            <div class="screenshot-info"><span>Forensic Telemetry</span></div>
+          </div>
+          <!-- Slide 5 -->
+          <div class="screenshot-card" data-caption="Provide scope and urgency alongside your prompts.">
+            <img src="assets/images/system/5. provide scope and urgency alongside your prompts.png" alt="Scope and Urgency" />
+            <div class="screenshot-info"><span>Session Guardrails</span></div>
+          </div>
+          <!-- Slide 6 -->
+          <div class="screenshot-card" data-caption="Explicit tool calls, results, and suggestions for next steps.">
+            <img src="assets/images/system/6. tool calls are explicit as are the results and suggestions for next steps.png" alt="Tool Calling System" />
+            <div class="screenshot-info"><span>Agentic Execution</span></div>
+          </div>
+          <!-- Slide 7 -->
+          <div class="screenshot-card" data-caption="Analysts can add manual observations and analyze logs for workflow efficiencies.">
+            <img src="assets/images/system/7. analysts can add manual observations and analyze logs for workflow efficiencies on-demand.png" alt="Manual Observations and Logs" />
+            <div class="screenshot-info"><span>Human-in-the-Loop</span></div>
+          </div>
+          <!-- Slide 8 -->
+          <div class="screenshot-card" data-caption="Workflow analysis identifies efficiencies and suggests tool tweaks.">
+            <img src="assets/images/system/8. workflow analysis looks for efficiencies including suggestions for tools and tweaks.png" alt="Workflow Efficiency analysis" />
+            <div class="screenshot-info"><span>Efficiency Analysis</span></div>
+          </div>
+          <!-- Duplicates for seamless loop -->
+          <div class="screenshot-card" data-caption="Web-based setup and interaction. Allows private and OpenAI-compatible providers.">
+            <img src="assets/images/system/1. web-based setup and interaction. allows private and openai-compatible providers.png" alt="Web-based setup and interaction" />
+            <div class="screenshot-info"><span>Web Setup & Interaction</span></div>
+          </div>
+          <div class="screenshot-card" data-caption="Ensuring only allowed devices are scanned (allow and deny lists).">
+            <img src="assets/images/system/2. A key aspect is ensuring that only allowed devices are scanned (allow and deny lists).png" alt="Allow and Deny Lists" />
+            <div class="screenshot-info"><span>Access Controls</span></div>
+          </div>
+          <div class="screenshot-card" data-caption="Several pre-built MCP servers can be enabled or disabled based on needs.">
+            <img src="assets/images/system/3. several pre-built mcp servers are enable or disabled based on needs.png" alt="MCP Server Configuration" />
+            <div class="screenshot-info"><span>MCP Tool Ecosystem</span></div>
+          </div>
+          <div class="screenshot-card" data-caption="Extensive logging for prompts, artifacts, analyses, and system-wide keystrokes.">
+            <img src="assets/images/system/4. extensive logging for prompts, artifacts, analyses, and even system-wide keystrokes.png" alt="Extensive Logging" />
+            <div class="screenshot-info"><span>Forensic Telemetry</span></div>
+          </div>
+          <div class="screenshot-card" data-caption="Provide scope and urgency alongside your prompts.">
+            <img src="assets/images/system/5. provide scope and urgency alongside your prompts.png" alt="Scope and Urgency" />
+            <div class="screenshot-info"><span>Session Guardrails</span></div>
+          </div>
+          <div class="screenshot-card" data-caption="Explicit tool calls, results, and suggestions for next steps.">
+            <img src="assets/images/system/6. tool calls are explicit as are the results and suggestions for next steps.png" alt="Tool Calling System" />
+            <div class="screenshot-info"><span>Agentic Execution</span></div>
+          </div>
+          <div class="screenshot-card" data-caption="Analysts can add manual observations and analyze logs for workflow efficiencies.">
+            <img src="assets/images/system/7. analysts can add manual observations and analyze logs for workflow efficiencies on-demand.png" alt="Manual Observations and Logs" />
+            <div class="screenshot-info"><span>Human-in-the-Loop</span></div>
+          </div>
+          <div class="screenshot-card" data-caption="Workflow analysis identifies efficiencies and suggests tool tweaks.">
+            <img src="assets/images/system/8. workflow analysis looks for efficiencies including suggestions for tools and tweaks.png" alt="Workflow Efficiency analysis" />
+            <div class="screenshot-info"><span>Efficiency Analysis</span></div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+    <!-- Modal for screenshot enlargement -->
+    <div class="ss-modal" id="ssModal">
+      <div class="ss-modal-backdrop" id="ssModalBackdrop"></div>
+      <div class="ss-modal-content">
+        <button class="ss-modal-close" id="ssModalClose">&times;</button>
+        <button class="ss-modal-nav ss-prev" id="ssModalPrev" aria-label="Previous Image">&lsaquo;</button>
+        <button class="ss-modal-nav ss-next" id="ssModalNext" aria-label="Next Image">&rsaquo;</button>
+        <img id="ssModalImg" src="" alt="" />
+        <p class="ss-modal-caption" id="ssModalCaption"></p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       INSTALL
+  ============================================================ -->
+  <section id="install">
+    <div class="section-inner">
+      <div class="section-label">// 07 — INSTALLATION</div>
+      <h2 class="section-title">Up and Running in Minutes</h2>
+      <div class="install-steps">
+
+        <div class="install-step">
+          <div class="step-num">01</div>
+          <div class="step-body">
+            <h3>Clone the Repository</h3>
+            <div class="code-block">
+              <code>git clone https://github.com/raistlinJ/cyber-agent-flow.git
+cd cyber-agent-flow</code>
+              <button class="copy-btn" data-copy="git clone https://github.com/raistlinJ/cyber-agent-flow.git&#10;cd cyber-agent-flow">Copy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="install-step">
+          <div class="step-num">02</div>
+          <div class="step-body">
+            <h3>Install Python Dependencies</h3>
+            <div class="code-block">
+              <code>python3 -m venv venv &amp;&amp; source venv/bin/activate
+pip install Flask mcp ollama</code>
+              <button class="copy-btn" data-copy="python3 -m venv venv && source venv/bin/activate&#10;pip install Flask mcp ollama">Copy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="install-step">
+          <div class="step-num">03</div>
+          <div class="step-body">
+            <h3>Start Ollama &amp; Pull a Model</h3>
+            <div class="code-block">
+              <code>ollama serve
+ollama pull llama3</code>
+              <button class="copy-btn" data-copy="ollama serve&#10;ollama pull llama3">Copy</button>
+            </div>
+            <p class="step-note">Any tool-calling model works. <code>llama3.1</code>, <code>qwen2.5</code>, and <code>mistral-nemo</code> are good choices.</p>
+          </div>
+        </div>
+
+        <div class="install-step">
+          <div class="step-num">04</div>
+          <div class="step-body">
+            <h3>Launch the Server</h3>
+            <div class="code-block">
+              <code>python3 app.py</code>
+              <button class="copy-btn" data-copy="python3 app.py">Copy</button>
+            </div>
+            <p class="step-note">Open <code>http://localhost:5055</code> in your browser. Select a model, enable tools, and click <strong>Start Service</strong>.</p>
+          </div>
+        </div>
+
+        <div class="install-step">
+          <div class="step-num">05</div>
+          <div class="step-body">
+            <h3>Or Use Docker</h3>
+            <div class="code-block">
+              <code>docker-compose up --build</code>
+              <button class="copy-btn" data-copy="docker-compose up --build">Copy</button>
+            </div>
+            <p class="step-note">A <code>Dockerfile</code> and <code>docker-compose.yml</code> are included for containerized deployments.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="req-box">
+        <h3>Requirements</h3>
+        <ul>
+          <li><strong>OS:</strong> Kali Linux (recommended) or any Debian-based distro with security tools installed</li>
+          <li><strong>Python:</strong> 3.10+</li>
+          <li><strong>LLM:</strong> <a href="https://ollama.com/" target="_blank">Ollama</a> or any Ollama-compatible endpoint</li>
+          <li><strong>Model:</strong> Any tool-calling model (llama3, llama3.1, qwen2.5, mistral, etc.)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TEAM
+  ============================================================ -->
+  <section id="team">
+    <div class="section-inner">
+      <div class="section-label">// 08 — TEAM</div>
+      <h2 class="section-title">Research Team</h2>
+      <p class="section-desc">
+        This tool was developed as part of ongoing cybersecurity research and submitted to symposium review.
+        We are actively extending the platform — contributions and feedback welcome.
+      </p>
+      <div class="team-grid">
+        <!-- Add team members here. Example structure: -->
+        <div class="team-card">
+          <div class="team-avatar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" width="48" height="48"><path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
+          </div>
+          <div class="team-info">
+            <strong>Research Group</strong>
+            <span>Cyber Research Lab</span>
+            <a href="https://github.com/raistlinJ/cyber-agent-flow" target="_blank" class="team-link">GitHub →</a>
+          </div>
+        </div>
+        <!-- Duplicate and fill in real names / photos when ready -->
+      </div>
+
+      <div class="contact-box">
+        <h3>Contact &amp; Contributions</h3>
+        <p>Found a bug? Have a feature request? Open an issue or pull request on GitHub.</p>
+        <a href="https://github.com/raistlinJ/cyber-agent-flow/issues" target="_blank" class="btn btn-primary">Open an Issue</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-bracket">[</span>CYBER AGENTFLOW<span class="logo-bracket">]</span>
+        <span class="footer-sub">WebUI</span>
+      </div>
+      <p class="footer-desc">A privacy-preserving agentic penetration testing platform powered by the Model Context Protocol.</p>
+      <div class="footer-links">
+        <a href="https://github.com/raistlinJ/cyber-agent-flow" target="_blank">GitHub</a>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#install">Install</a>
+        <a href="#team">Team</a>
+      </div>
+      <p class="footer-copy">&copy; <span id="footerYear"></span> Cyber AgentFlow Research Team. Released under MIT License.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
